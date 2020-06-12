@@ -12,7 +12,7 @@ function Footer() {
                     <Col className="p-0" md={3} sm={12}> 
                         Alex Zhen
                     </Col>
-                    <Col className="p-0 d-flex justify-content-end" md={3} sm={12}>
+                    <Col className="p-0 d-flex justify-content-end" md={6} sm={12}>
                         This site was made by Alex Zhen
                     </Col>
                 </Row>
