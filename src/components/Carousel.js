@@ -29,7 +29,7 @@ class Carousel extends React.Component {
                     title: 'LinkedIn',
                     subTitle: 'Professional network',
                     imgSrc: LinkedIn,
-                    link: 'https://github.com/alexzhen93',
+                    link: 'https://www.linkedin.com/in/jia-peng-zhen-6455a1170/',
                     selected: false
                 },
                 {
