@@ -52,7 +52,7 @@ class ContactPage extends React.Component {
 
                         <Form.Group>
                             <Form.Label htmlFor="email">Email</Form.Label>
-                            <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
+                            <Form.Control className="validate" id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
                         </Form.Group>
 
                         <Form.Group>

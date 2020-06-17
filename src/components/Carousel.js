@@ -7,6 +7,7 @@ import Card from '../components/Card';
 import GitHub from '../assets/images/GitHub.png';
 import LinkedIn from '../assets/images/LinkedIn.png';
 import Alex from '../assets/images/Alex.png';
+import Resume from '../assets/pdfs/Resume.pdf';
 
 
 
@@ -34,10 +35,10 @@ class Carousel extends React.Component {
                 },
                 {
                     id: 2,
-                    title: 'GitHub',
-                    subTitle: 'Personal and School Projects',
+                    title: 'Personal Resume',
+                    subTitle: 'Resume of all my work and personal experiences',
                     imgSrc: Alex,
-                    link: 'https://github.com/alexzhen93',
+                    link: Resume,
                     selected: false
                 },
             ]
