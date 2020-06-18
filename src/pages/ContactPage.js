@@ -5,6 +5,7 @@ import { render } from '@testing-library/react';
 
 import Hero from '../components/Hero';
 import Content from '../components/Content';
+import Axios from 'axios';
 
 class ContactPage extends React.Component {
 
@@ -21,7 +22,7 @@ class ContactPage extends React.Component {
     }
 
     handleChange = (event) => {
-        const target  = event.target;
+        const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
 
@@ -37,6 +38,31 @@ class ContactPage extends React.Component {
         this.setState({
             disabled: true
         });
+
+        Axios.post('http://localhost:3030/api/email', this.state)
+            .then(res => {
+                if (res.data.success) {
+                    this.setState({
+                        disabled: false,
+                        emailSent: true
+                    });
+                }
+                else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: false
+                    });
+                }
+            })
+            .catch(err => {
+                console.log(err);
+                
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+                });
+            })
+
     }
 
     render() {
@@ -60,7 +86,7 @@ class ContactPage extends React.Component {
                             <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.messege} onChange={this.handleChange} />
                         </Form.Group>
 
-                        <Button className="d-inline-block" varient="primary" type="submit" disabledd={this.state.disabled}>
+                        <Button className="d-inline-block" varient="primary" type="submit" disabled={this.state.disabled}>
                             Send
                         </Button>
                         {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}

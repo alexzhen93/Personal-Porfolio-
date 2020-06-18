@@ -44,7 +44,7 @@ class App extends React.Component {
               <Link className="nav-link" to="/">Alex Zhen</Link>
               </Nav>
               </Navbar.Brand>
-            <Navbar.Toggle classname="border-0" aria-controls="navbar-toggle"/>
+            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
