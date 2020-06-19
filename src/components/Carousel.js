@@ -36,7 +36,7 @@ class Carousel extends React.Component {
                 {
                     id: 2,
                     title: 'Personal Resume',
-                    subTitle: 'Resume of all my work and personal experiences',
+                    subTitle: 'Resume',
                     imgSrc: Alex,
                     link: Resume,
                     selected: false
