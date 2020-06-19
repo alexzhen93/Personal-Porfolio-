@@ -5,7 +5,7 @@ const cors = require('cors');
 const sendGrid = require('@sendGrid/mail');
 
 const app = express();
-
+const API_Key ='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';
 app.use(bodyParser.json());
 
 app.use(cors());
@@ -25,7 +25,7 @@ app.post('/api/email', (req, res, next) => {
 
     console.log('error: here', req.body);
 
-    sendGrid.setApiKey('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 ');
+    sendGrid.setApiKey(API_Key);
     const msg = {
         to: 'jiapengzhen@outlook.com',
         from: req.body.email,
