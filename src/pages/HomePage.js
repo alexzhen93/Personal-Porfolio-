@@ -1,5 +1,4 @@
 import React from 'react';
-import './Style.css';
 
 import Hero from '../components/Hero';
 import Carousel from '../components/Carousel';

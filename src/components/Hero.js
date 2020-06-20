@@ -5,9 +5,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
+
 function Hero(props) {
 
     return(
+        
         <Jumbotron className="bg-transparent Jumbotron-fluid p-0">
             <Container fluid={true}>
                 <Row className="justify-content-center py-5">
@@ -19,6 +21,7 @@ function Hero(props) {
                 </Row>
             </Container>
         </Jumbotron>
+        
     );
 }
 
