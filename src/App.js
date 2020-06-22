@@ -23,7 +23,8 @@ class App extends React.Component {
       home: {
         title: 'Hi, my name is Alex Zhen',
         subTitle: 'Projects that makes a difference',
-        text: 'Checkout my projects below'
+        text: 'Checkout my projects below',
+        titel2: 'Projects'
       },
       about: {
         title: 'About Me'
@@ -38,23 +39,23 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Container className="p-0" fluid={true}>
+        <Container className="p-0" fluid={true} style={{backgroundColor:"#121212", color:"white"}}>
           <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>
               <Nav className="ml-auto">
-              <Link className="nav-link" to="/">Alex Zhen</Link>
+              <Link className="nav-link"  style={{color:"white"}} to="/">Alex Zhen</Link>
               </Nav>
               </Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" style={{color:"white"}} to="/">Home</Link>
+                <Link className="nav-link" style={{color:"white"}} to="/about">About</Link>
                 {/* <Link className="nav-link" to="/contact">Contact</Link>  */}
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
+          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} title2={this.state.home.titel2} />} />
           <Route path="/about" render={() => <AboutPage title={this.state.about.title} />} />
           <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />} />
           <Footer/>

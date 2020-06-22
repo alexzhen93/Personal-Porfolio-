@@ -6,6 +6,8 @@ import Card from '../components/Card';
 
 import GitHub from '../assets/images/GitHub.png';
 import LinkedIn from '../assets/images/LinkedIn.png';
+import SplitIt from '../assets/images/SplitIt.png';
+import Weather from '../assets/images/Weather.png';
 import Alex from '../assets/images/Alex.png';
 import Resume from '../assets/pdfs/Resume.pdf';
 
@@ -19,6 +21,14 @@ class Carousel extends React.Component {
             items: [
                 {
                     id: 0,
+                    title: 'Personal Resume',
+                    subTitle: 'Resume',
+                    imgSrc: Alex,
+                    link: Resume,
+                    selected: false
+                },
+                {
+                    id: 1,
                     title: 'GitHub',
                     subTitle: 'Personal and School Projects',
                     imgSrc: GitHub,
@@ -26,7 +36,7 @@ class Carousel extends React.Component {
                     selected: false
                 },
                 {
-                    id: 1,
+                    id: 2,
                     title: 'LinkedIn',
                     subTitle: 'Professional network',
                     imgSrc: LinkedIn,
@@ -34,11 +44,19 @@ class Carousel extends React.Component {
                     selected: false
                 },
                 {
-                    id: 2,
-                    title: 'Personal Resume',
-                    subTitle: 'Resume',
-                    imgSrc: Alex,
-                    link: Resume,
+                    id: 3,
+                    title: 'Split it',
+                    subTitle: 'Spliting Bill Web App',
+                    imgSrc: SplitIt,
+                    link: 'https://app-split-it.herokuapp.com/',
+                    selected: false
+                },
+                {
+                    id: 4,
+                    title: 'SimpleWeather',
+                    subTitle: 'Weather App',
+                    imgSrc: Weather,
+                    link: 'https://weather-app-az.herokuapp.com/',
                     selected: false
                 },
             ]
